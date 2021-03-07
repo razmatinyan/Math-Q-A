@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   font-family: 'Poppins', sans-serif;
+   box-sizing: border-box;
+   outline: none;
+   overflow: hidden;
+}
+
+body {
+   background: #262626;
+   color: #fff;
+   // display: flex;
+   // justify-content: center;
+   // align-items: center;
+   // position: relative;
+   height: 100vh;
+   text-align: center;
+}
+
+.main-ui {
+   position: relative;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+
+.progress{
+   border: 1px solid #c7c7c7;
+   border-right:none;
+   position: relative;
+
+   .boxes{
+      display: flex;
+      width: 100%;
+   
+      .box {
+         height:40px;
+         border-right:1px solid #c7c7c7;
+         flex: 1;
+      }
+   }
+
+   .progress-inner {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      background: #9eff02;
+      opacity: .57;
+      transform: scaleX(0);
+      transform-origin: center left;
+      transition:transform .4s ease-in-out
+   }
+}
+
+.modal {
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-color: rgba(26, 26, 26,.82);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   opacity: 0;
+   visibility: hidden;
+   transition: all .3s ease-in-out;
+   transform: scale(1.2);
+
+   .modal-inner {
+
+      .end-message {
+         font-size: 3rem;
+      }
+
+      .close-modal {
+         font-size: 2rem;
+         padding: 10px 25px;
+         border-radius: 50px;
+         border:none;
+         cursor: pointer;
+         transition: .5s ease-in-out all;
+
+         &:hover {
+            background-color: #9eff02;
+         }
+      }
+   }
+}
+
+body.modal-is-open .modal {
+   opacity: 1;
+   visibility: visible;
+   transform: scale(1);
+}
+
+body.modal-is-open .main-ui {
+   filter:blur(4px)
+}
+
+@keyframes showError {
+   50% {
+      color:red;
+      transform: scale(1.2);
+   }
+
+   100% {
+      // color: #333;
+      transform: scale(1);
+   }
+}
+
+.animate-wrong {
+   animation: .45s showError;
+}
+
+.problem {
+   text-align: center;
+   font-size: 5rem;
+}
+
+.field {
+   width: 500px;
+   padding: 5px 15px;
+   border-radius: 50px;
+   font-size: 2rem;
+   border:none;
+}
+
+.answer {
+   font-size: 2rem;
+   padding: 5px 15px;
+   border-radius: 50px;
+   border:none;
+   cursor: pointer;
+   transition: all .5s ease-in-out;
+
+   &:hover {
+      background: #9eff02;
+   }
+}
+
+.form {
+   margin-bottom: 30px;
+}
+
+.text {
+   font-size: 1.2rem;
+   margin-bottom: 30px;
+}

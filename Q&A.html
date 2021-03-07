@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/q&a.css">
+   <title>Q & A</title>
+</head>
+
+<body>
+   <div class="main-ui">
+      <p class="problem"></p>
+      <form action="" class="form">
+         <input type="number" class="field" autocomplete="off">
+         <button class="answer">Answer</button>
+      </form>
+      <p class="text">You need <span class="points">10</span> more points, and are allowed to make <span
+            class="mistakes">2</span>
+         more
+         mistakes</p>
+
+      <div class="progress">
+         <div class="boxes">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+         </div>
+         <div class="progress-inner"></div>
+      </div>
+   </div>
+
+   <div class="modal">
+      <div class="modal-inner">
+         <p class="end-message"></p>
+         <button class="close-modal">Start Over</button>
+      </div>
+   </div>
+
+   <script src="js/q&a.js"></script>
+</body>
+
+</html>
